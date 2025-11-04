@@ -2,7 +2,8 @@
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta viewport diperbarui untuk optimasi mobile dan menonaktifkan zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Judul diperbarui sesuai permintaan -->
     <title>Gagal Bayar PT Dana Syariah Indonesia; Sebuah Dialektika</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,6 +19,11 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f1f5f9; /* slate-100 */
+            /* Menonaktifkan pemilihan teks untuk proteksi konten */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
         
         .content-card {
@@ -442,6 +448,24 @@
 
             window.addEventListener('scroll', updateActiveLink);
             updateActiveLink(); 
+        });
+    </script>
+
+    <!-- Script untuk proteksi konten (menonaktifkan klik kanan dan shortcut) -->
+    <script>
+        // Menonaktifkan klik kanan
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Menonaktifkan shortcut keyboard umum
+        document.addEventListener('keydown', e => {
+            // Menonaktifkan Ctrl+C (copy), Ctrl+U (view source), Ctrl+S (save)
+            if (e.ctrlKey && ('cus'.indexOf(e.key.toLowerCase()) !== -1)) {
+                e.preventDefault();
+            }
+            // Menonaktifkan F12 (developer tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
         });
     </script>
 </body>
