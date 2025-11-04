@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul diperbarui sesuai permintaan -->
+    <title>Gagal Bayar PT Dana Syariah Indonesia; Sebuah Dialektika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS (Struktur visual dari file referensi dipertahankan) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+        }
+        
+        .content-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #e2e8f0; /* slate-200 */
+        }
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 20px -5px rgb(0 0 0 / 0.1), 0 6px 8px -6px rgb(0 0 0 / 0.1);
+        }
+
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.25rem 1.5rem; /* p-5 */
+            border-bottom: 1px solid #f1f5f9;
+            transition: background-color 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details > summary:hover {
+            background-color: #f8fafc; /* slate-50 */
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details > summary .icon {
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke-width: 2.5;
+        }
+        details[open] > summary .icon {
+            transform: rotate(90deg);
+        }
+        details > div.accordion-content {
+            padding: 1rem 1.5rem 1.5rem 1.5rem; /* px-6 pb-6 pt-4 */
+        }
+        
+        .nav-link {
+            transition: all 0.2s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link.active, .nav-link:hover {
+            border-bottom-color: #0d9488; /* teal-600 */
+            color: #0f766e; /* teal-700 */
+        }
+
+        .header-image {
+            border-radius: 0.5rem; /* 8px */
+            box-shadow: 0 10px 20px -5px rgb(0 0 0 / 0.15);
+        }
+        
+        .prose-custom {
+            color: #334155; /* slate-700 */
+        }
+        .prose-custom h2 {
+            color: #0f766e; /* teal-700 */
+            font-weight: 700;
+            margin-bottom: 1em;
+            padding-bottom: 0.25em;
+            border-bottom: 1px solid #e2e8f0; /* slate-200 */
+        }
+        .prose-custom h3 {
+            color: #1e293b; /* slate-800 */
+            font-weight: 600;
+            margin-top: 1.5em;
+        }
+        .prose-custom p {
+            line-height: 1.7;
+            margin-bottom: 1.25em;
+        }
+        .prose-custom ul {
+            list-style-type: disc;
+            padding-left: 1.5em;
+            margin-bottom: 1.25em;
+        }
+        .prose-custom ol {
+            list-style-type: decimal;
+            padding-left: 1.5em;
+            margin-bottom: 1.25em;
+        }
+        .prose-custom li {
+            margin-bottom: 0.5em;
+        }
+        .prose-custom strong {
+            color: #000;
+        }
+         .prose-custom blockquote {
+            border-left: 4px solid #0d9488; /* teal-600 */
+            padding-left: 1rem;
+            margin-left: 0;
+            font-style: italic; /* Tetap biarkan blockquote italic untuk gaya */
+            color: #475569; /* slate-600 */
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- 1. HEADER / NAVIGASI (Navigasi di-"samarkan") -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg shadow-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-bold text-xl text-teal-700">Analisis Kasus DSI</span>
+                </div>
+                <!-- Navigasi diubah untuk menyamarkan A vs B -->
+                <div class="hidden md:flex md:space-x-8">
+                    <a href="#hook" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm active">Pembuka</a>
+                    <a href="#relevansi" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Konteks</a>
+                    <a href="#suara-keadilan" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Suara Keadilan</a>
+                    <a href="#jalan-pemulihan" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Jalan Pemulihan</a>
+                    <a href="#titik-temu" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Titik Temu</a>
+                    <a href="#refleksi" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Refleksi</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-teal-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-SAtinteal-500">
+                        <span class="sr-only">Buka menu</span>
+                        <svg id="icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg id="icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hook" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Pembuka</a>
+                <a href="#relevansi" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Konteks</a>
+                <a href="#suara-keadilan" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Suara Keadilan</a>
+                <a href="#jalan-pemulihan" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Jalan Pemulihan</a>
+                <a href="#titik-temu" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Titik Temu</a>
+                <a href="#refleksi" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Refleksi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION (Naratif & Reflektif) -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                 alt="Analisis kontrak dan keuangan" 
+                 class="w-full h-full object-cover header-image"
+                 onerror="this.src='https://placehold.co/1740x800/e0f2f1/0d9488?text=Gagal+Memuat+Gambar'">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-100 via-white/70 to-white/30"></div>
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+                Gemuruh di Ranah Syariah
+            </h1>
+            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-700 font-medium">
+                Menyelami dialektika keadilan dan pragmatisme pemulihan dalam riak kasus PT Dana Syariah Indonesia (DSI).
+            </p>
+            <p class="mt-4 text-base md:text-lg max-w-2xl mx-auto text-slate-600">
+                Ini bukan pencarian siapa yang salah. Ini adalah penjelajahan untuk menemukan di mana letak hikmahnya. Mari kita telusuri bersama.
+            </p>
+        </div>
+    </header>
+
+    <!-- 3. MAIN CONTENT (Lebih naratif, "samar", dan tidak memvonis) -->
+    <main class="max-w-4xl mx-auto p-4 md:p-8 space-y-10 md:space-y-12 -mt-16 md:-mt-24">
+        
+        <!-- Bagian 1: Pembuka (Hook) -->
+        <section id="hook" class="content-card p-6 md:p-8 prose prose-custom max-w-none">
+            <h2>Bagian 1: Paduan Suara dalam Krisis</h2>
+            <p>Ada gempa kecil yang mengguncang rasa percaya. Saat sebuah platform yang menyandang nama "Syariah" mengalami gagal bayar, riaknya tidak hanya finansial, tapi juga emosional dan spiritual. Seketika, sebuah paduan suara—atau mungkin lebih tepat disebut konstelasi gagasan—muncul ke permukaan.</p>
+            <p>Di satu sisi, kita mendengar suara yang jernih dan tegas. Suara ini berpegang erat pada naskah perjanjian. "Dana kami harus kembali 100%," serunya. "Modal dan margin sudah dijanjikan. Jaminan aset ada. Skenario rugi seharusnya tidak ada dalam kamus. Semua proposal di luar penjualan jaminan adalah penyimpangan."</p>
+            
+            <blockquote>
+                "Pokok akad... Margin sudah ada d awal... Tidak ada peluang loss... Harus 100% dana kembali beserta margin. Sehingga offering proposal diluar akad tertolak & harus dtolak."
+                <br>
+                <cite class="text-sm not-italic">- Salah satu perspektif investor</cite>
+            </blockquote>
+            
+            <p>Di sisi lain, terdengar suara yang lebih pragmatis, sebuah bisikan yang memetakan realitas. "Tunggu dulu," katanya. "Bagaimana jika menjual jaminan itu sulit? Bagaimana jika nilainya jatuh? Mari kita audit dulu, bekukan rekening, cari investor baru, atau mungkin... kita ubah piutang ini jadi kepemilikan saham."</p>
+            <p>Kita tidak sedang melihat dua kubu yang berperang. Kita sedang menyaksikan sebuah dialektika yang krusial: antara tuntutan keadilan yang berbasis teks (legal-formal) dan tawaran solusi yang berbasis konteks (pragmatis-realistis). Pertanyaannya, di manakah jiwa Hukum Syariah bersemayam dalam dialog ini?</p>
+        </section>
+
+        <!-- Bagian 2: Konteks & Relevansi -->
+        <section id="relevansi" class="content-card p-6 md:p-8 prose prose-custom max-w-none">
+            <h2>Bagian 2: Cermin bagi Kita Semua</h2>
+            <p>Mengapa kita perlu meluangkan waktu untuk memahaminya? Karena kasus DSI adalah cermin besar bagi kita semua, para penggiat finansial di era digital. Kita mungkin terlalu mudah terpesona oleh label "syariah", dan tanpa sadar menyamakannya dengan "bebas risiko". Tapi, benarkah semudah itu?</p>
+            <p>Cerita ini mengajak kita untuk merenung dan bertanya dengan lebih dalam:</p>
+            <ul>
+                <li>Apakah "syariah" itu sebuah perisai ajaib anti-rugi? Ataukah ia sebuah kompas etika yang justru baru benar-benar diuji ketangguhannya saat badai datang?</li>
+                <li>Saat platform P2P Syariah terhuyung, siapa yang sesungguhnya berada di garis depan untuk memikul beban risiko itu?</li>
+                <li>Apa sebetulnya makna "keadilan" dalam fiqh muamalah? Apakah ia identik dengan "kembali 100%", atau ia lebih bermakna "proses penyelesaian yang paling transparan, adil, dan paling sedikit mudaratnya"?</li>
+            </ul>
+            <p>Memahami denyut nadi di balik berbagai suara ini bukan sekadar studi kasus. Ini adalah bekal berharga untuk melangkah lebih bijak, agar kita tidak hanya terpukau oleh "label", tapi sungguh-sungguh meresapi "prinsip".</p>
+        </section>
+
+        <!-- Bagian 3.1: Analisis Suara Keadilan (Accordion) -->
+        <section id="suara-keadilan" class="content-card overflow-hidden p-6 md:p-8">
+            <div class="prose prose-custom max-w-none">
+                <h2>Bagian 3: Menyelami Suara Tuntutan Keadilan</h2>
+                <p>Mari kita dengarkan lebih dekat suara yang menuntut keadilan berbasis teks akad. Suara ini berakar pada empat "Asas" yang sangat fundamental. Kita akan menjelajahinya satu per satu, bukan untuk menghakimi, namun untuk memahami resonansinya.</p>
+            </div>
+            
+            <div class="border border-slate-200 rounded-lg overflow-hidden mt-6">
+                <!-- Accordion 1: Asas Akad -->
+                <details>
+                    <summary>
+                        <span class="font-semibold text-lg text-slate-800">Asas Akad: Benarkah "Tidak Ada Peluang Loss"?</span>
+                        <svg class="icon text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                    </summary>
+                    <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
+                        <p><strong>Gagasan Inti:</strong> Banyak yang berasumsi, atau setidaknya berpegang pada pemahaman, bahwa akad yang digunakan adalah Murabahah Wakalah bil Ujrah. Dalam skema ini, modal dan margin (keuntungan) sudah ditetapkan di muka. Logika yang terbangun: "tidak ada ruang untuk kerugian."</p>
+                        <h3 class="text-teal-700">Refleksi Kritis:</h3>
+                        <p>Gagasan ini sangat bisa dipahami. Namun, mari kita jelajahi premis ini. Dalam model Wakalah (perwakilan), bayangkan Anda adalah pemilik modal. DSI adalah 'mandor' yang Anda upah (bil Ujrah) untuk menjalankan proyek jual-beli (Murabahah) atas nama Anda kepada borrower.</p>
+                        <p>Pertanyaan intinya: Saat si borrower (penerima dana) gagal bayar, risiko piutang macet itu, secara fiqh, mendarat di pangkuan siapa? Apakah si 'mandor' (DSI), atau si 'pemilik modal' (Anda)?</p>
+                        <p>Jiwanya, risiko itu mendarat di pangkuan Anda sebagai pemilik modal. Si 'mandor' (DSI) baru ikut menanggung rugi jika ia terbukti melakukan kesalahan fatal (ta'addi atau tafrit) dalam menjalankan amanahnya.</p>
+                        <p>Jadi, asumsi "tidak ada peluang loss" dalam ekosistem P2P Lending Syariah, bahkan dengan akad Murabahah sekalipun, adalah sebuah premis yang perlu kita kaji ulang. Risiko kredit itu nyata, dan ia melekat erat pada investor sebagai pemilik modal (Sahibul Mal).</p>
+                    </div>
+                </details>
+                <!-- Accordion 2: Asas Mitigasi -->
+                <details>
+                    <summary>
+                        <span class="font-semibold text-lg text-slate-800">Asas Mitigasi: "Hanya Ada Satu Jalan: Jual Jaminan"</span>
+                        <svg class="icon text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                    </summary>
+                    <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
+                        <p><strong>Gagasan Inti:</strong> Mitigasi risiko utama adalah jaminan aset >100%. Maka, satu-satunya solusi syar'i adalah eksekusi jaminan itu. Opsi lain (bail in, konversi saham) dianggap menyalahi mitigasi awal.</p>
+                        <h3 class="text-teal-700">Refleksi Kritis:</h3>
+                        <p>Di sini, suara ini berdiri sangat kokoh. Menuntut eksekusi jaminan (Rahn) adalah hak absolut kreditor (investor). Itu tidak terbantahkan dan sangat syar'i.</p>
+                        <p>Namun, Hukum Syariah juga sangat luwes dan kaya. Ia mengenal sebuah prinsip indah bernama Sulh (penyelesaian damai). Bagaimana jika skenario terburuk terjadi? Penjualan aset jaminan ternyata sangat sulit, memakan waktu bertahun-tahun, atau nilainya anjlok drastis karena dijual paksa?</p>
+                        <p>Apakah kita akan tetap kaku berpegang pada satu skenario (jual paksa) yang mungkin 'membakar' sisa nilai aset, atau kita membuka diri pada negosiasi (Sulh) untuk mencari jalan yang paling menyelamatkan harta (Hifdz al-Mal)? Ini adalah sebuah pertanyaan strategis, bukan sekadar legal-formal.</p>
+                    </div>
+                </details>
+                <!-- Accordion 3: Asas Tanggung Jawab -->
+                <details>
+                    <summary>
+                        <span class="font-semibold text-lg text-slate-800">Asas Tanggung Jawab: "Janji Adalah Utang"</span>
+                        <svg class="icon text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                    </summary>
+                    <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
+                        <p><strong>Gagasan Inti:</strong> DSI harus memberi janji tertulis yang spesifik (nominal, waktu, target). Janji yang kabur atau tidak terukur harus ditolak.</p>
+                        <h3 class="text-teal-700">Refleksi Kritis:</h3>
+                        <p>Tuntutan ini adalah jantung dari prinsip Amanah. Dalam muamalah (transaksi), musuh terbesarnya adalah Gharar (ketidakjelasan). Menuntut rencana yang jelas, terukur, dan berbatas waktu (SMART) bukanlah permintaan yang berlebihan, itu adalah hak syar'i investor.</p>
+                        <p>Janji yang kabur, tidak terukur, dan tanpa batas waktu adalah Gharar itu sendiri. Perspektif ini 100% beresonansi dengan jiwa syariah yang menjunjung tinggi akuntabilitas (Mas'uliyyah).</p>
+                    </div>
+                </details>
+                <!-- Accordion 4: Asas Keadilan -->
+                <details>
+                    <summary>
+                        <span class="font-semibold text-lg text-slate-800">Asas Keadilan: "Pailit Bukan Berarti Lari"</span>
+                        <svg class="icon text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                    </summary>
+                    <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
+                        <p><strong>Gagasan Inti:</strong> Status pailit tidak serta-merta menghilangkan tanggung jawab. Dana investor harus terpisah dari dana operasional DSI. Akad awal tidak bisa diubah sepihak.</p>
+                        <h3 class="text-teal-700">Refleksi Kritis:</h3>
+                        <p>Ini adalah poin krusial. Prinsip Wakalah (agen) mengharuskan pemisahan dana. Bayangkan dana Anda (titipan) dan dana DSI (operasional) bercampur di satu 'laci' yang sama (Khalth). Saat itu terjadi, status DSI otomatis berubah di mata fiqh. Dari sekadar 'mandor' (Amanah), ia bisa bergeser menjadi 'penjamin penuh' (Dhaman).</p>
+                        <p>Mengenai "akad tidak bisa berubah", ini adalah gagasan yang menarik. Akad awal memang sakral. Tapi, apakah itu berarti kita dilarang membuat 'akad baru' untuk menyelesaikan sengketa? Di sinilah pintu Sulh (damai) terbuka, yang justru membolehkan para pihak bersepakat (atas dasar 'an taradhin) untuk, misalnya, mengubah utang menjadi kepemilikan aset.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+
+        <!-- Bagian 3.2: Analisis Jalan Pemulihan (Timeline) -->
+        <section id="jalan-pemulihan" class="content-card p-6 md:p-8">
+            <div class="prose prose-custom max-w-none">
+                <h2>Bagian 4: Menapaki Peta Jalan Pemulihan</h2>
+                <p>Sekarang, mari kita beralih ke suara-suara yang menawarkan peta jalan pemulihan. Ini adalah narasi tentang ikhtiar (upaya) yang sistematis dan pragmatis, sebuah upaya membangun jembatan di atas jurang krisis.</p>
+            </div>
+            
+            <div class="mt-8 flow-root">
+                <ul class="-mb-8">
+                    <!-- Poin 1, 2, 3 -->
+                    <li>
+                        <div class="relative pb-8">
+                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-slate-200" aria-hidden="true"></span>
+                            <div class="relative flex space-x-3">
+                                <div><span class="h-8 w-8 rounded-full bg-teal-100 flex items-center justify-center ring-8 ring-white"><svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></span></div>
+                                <div class="min-w-0 flex-1 pt-1.5">
+                                    <h3 class="font-semibold text-slate-800">Langkah Awal: Membersihkan Luka (Audit, Escrow)</h3>
+                                    <p class="mt-2 text-slate-600"><strong>Refleksi Syariah:</strong> Usulan audit forensik, rekening escrow, dan waterfall pembayaran adalah langkah tabayyun (klarifikasi). Audit adalah ikhtiar mencari kebenaran, mendeteksi ada tidaknya kelalaian (tafrit) atau pelanggaran (ta'addi). Escrow & waterfall adalah manifestasi dari 'Adl (Keadilan) dalam distribusi. Ini adalah fondasi dari Amanah.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Poin 4, 5 -->
+                    <li>
+                        <div class="relative pb-8">
+                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-slate-200" aria-hidden="true"></span>
+                            <div class="relative flex space-x-3">
+                                <div><span class="h-8 w-8 rounded-full bg-teal-100 flex items-center justify-center ring-8 ring-white"><svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg></span></div>
+                                <div class="min-w-0 flex-1 pt-1.5">
+                                    <h3 class="font-semibold text-slate-800">Langkah Menengah: Eksekusi & Rencana Darurat</h3>
+                                    <p class="mt-2 text-slate-600"><strong>Refleksi Syariah:</strong> Usulan likuidasi aset sejalan dengan apa yang dituntut oleh "suara keadilan". Ini adalah eksekusi Rahn (jaminan). Namun, peta jalan ini juga menyiapkan rencana darurat: Bridge Financing. Ini adalah ikhtiar mencari "napas buatan", yang sah selama napas itu (pendanaan baru) juga syariah-compliant (misalnya, via Musyarakah baru, bukan pinjaman ribawi).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Poin 6, 7 -->
+                    <li>
+                        <div class="relative">
+                            <div class="relative flex space-x-3">
+                                <div><span class="h-8 w-8 rounded-full bg-teal-100 flex items-center justify-center ring-8 ring-white"><svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 4H4m0 0l4 4m-4-4l4-4" /></svg></span></div>
+                                <div class="min-w-0 flex-1 pt-1.5">
+                                    <h3 class="font-semibold text-slate-800">Langkah Lanjutan: Kreativitas Sulh (Asset & Equity Swap)</h3>
+                                    <p class="mt-2 text-slate-600"><strong>Refleksi Syariah:</strong> Inilah inti dari "jembatan" itu. Ini adalah kreativitas muamalah yang berlandaskan prinsip Sulh (damai).
+                                    <br><br>
+                                    Daripada Anda memegang 'janji' pembayaran (Dain) yang tidak pasti, Anda ditawari memegang 'aset' (Ayn) yang riil. Atau, Anda ditawari mengubah status Anda: dari Kreditor (Da'in) yang cemas, menjadi Pemilik (Syarik) yang punya kendali. Ini adalah konversi utang menjadi modal (Musyarakah), dan ini sah, selama didasari kerelaan ('an taradhin).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bagian 5: Titik Temu (Menggantikan Tabel A vs B) -->
+        <section id="titik-temu" class="content-card p-6 md:p-8">
+            <div class="prose prose-custom max-w-none">
+                <h2>Bagian 5: Titik Temu di Balik Dialektika</h2>
+                <p>Setelah mendengar kedua sisi dari paduan suara ini, kita mungkin tergoda untuk memilih satu di atas yang lain. Tapi, bagaimana jika kita melihatnya secara berbeda? Bagaimana jika kedua narasi ini tidak sedang berperang, melainkan saling melengkapi?</p>
+                
+                <p>Meskipun terdengar berseberangan, kedua konstelasi gagasan ini sebenarnya berakar pada tujuan mulia yang sama, yaitu Hifdz al-Mal (menjaga dan menyelamatkan harta). Perbedaannya hanya pada jalurnya:</p>
+                <ul>
+                    <li><strong>Suara Keadilan</strong> berfokus pada Hifdz al-Mal melalui ketaatan teks, akuntabilitas, dan penegakan Amanah.</li>
+                    <li><strong>Jalan Pemulihan</strong> berfokus pada Hifdz al-Mal melalui adaptasi konteks, pragmatisme, dan prinsip Sulh (damai).</li>
+                </ul>
+                
+                <p>Tanpa "Suara Keadilan" yang menuntut transparansi (audit forensik) dan akuntabilitas (eksekusi jaminan), "Jalan Pemulihan" bisa menjadi liar dan tidak adil. Sebaliknya, tanpa "Jalan Pemulihan" yang menawarkan Sulh (damai), "Suara Keadilan" mungkin hanya akan mendapatkan kemenangan moral, namun kehilangan sisa nilai aset yang bisa diselamatkan.</p>
+
+                <!-- Glosarium (informatif, tanpa penekanan) -->
+                <h3 class="mt-12">Glosarium Intuitif Kita</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <div><strong>Murabahah:</strong> Akad jual beli (ada barang, ada margin).</div>
+                    <div><strong>Wakalah bil Ujrah:</strong> Anda menunjuk 'mandor' (agen) dan membayarnya 'fee'.</div>
+                    <div><strong>Rahn:</strong> Aset jaminan (agunan).</div>
+                    <div><strong>Ta'addi / Tafrit:</strong> Pelanggaran atau kelalaian fatal oleh si 'mandor'.</div>
+                    <div><strong>Dhaman:</strong> Kewajiban ganti rugi penuh (jika si 'mandor' terbukti lalai/melanggar).</div>
+                    <div><strong>Sulh:</strong> Prinsip penyelesaian sengketa secara damai (negosiasi).</div>
+                    <div><strong>'An Taradhin:</strong> Atas dasar saling ridha (kunci sahnya Sulh).</div>
+                    <div><strong>Dain vs. Ayn:</strong> Piutang (janji) vs. Aset (fisik/riil).</div>
+                    <div><strong>Syarik:</strong> Mitra atau pemegang saham (status baru Anda jika equity swap).</div>
+                    <div><strong>Hifdz al-Mal:</strong> Prinsip agung syariah untuk 'menjaga/menyelamatkan harta'.</div>
+                    <div><strong>Gharar:</strong> Ketidakjelasan atau spekulasi dalam transaksi.</div>
+                    <div><strong>Amanah:</strong> Kepercayaan dan tanggung jawab untuk menjalankannya.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bagian 6: Penutup & Refleksi (Inspiratif) -->
+        <section id="refleksi" class="content-card p-6 md:p-8">
+            <div class="prose prose-custom max-w-none">
+                <h2>Bagian 6: Refleksi - Kurikulum Menuju Kedewasaan</h2>
+                
+                <p>Perjalanan kita sampai di sini. Kita telah menyelami gemuruh di ranah DSI. Kita tidak menemukan jawaban hitam-putih, dan memang bukan itu tujuannya. Kita menemukan sesuatu yang jauh lebih berharga: sebuah dialektika.</p>
+                <p>Kita menemukan bahwa Hukum Syariah ternyata bukanlah kitab aturan yang kaku dan beku. Ia adalah samudera prinsip yang dinamis. Ia menghargai kekokohan akad, namun ia jauh lebih menghargai penyelesaian damai (Sulh) yang dilandasi keadilan ('Adl).</p>
+                
+                <p>Kasus ini bukanlah sebuah vonis atas kegagalan fintech syariah. Sebaliknya, ini adalah sebuah kurikulum. Sebuah materi pembelajaran yang mahal, namun sangat penting, untuk mendewasakan seluruh ekosistem: mendewasakan regulator, mendewasakan pelaku industri, dan yang terpenting, mendewaskan kita sebagai investor.</p>
+
+                <!-- Kotak Pelajaran (Inspiratif) -->
+                <div class="bg-teal-50 border-l-4 border-teal-500 text-teal-900 p-6 rounded-r-lg my-6 not-prose">
+                    <h4 class="font-bold text-lg mb-2">Pesan Inspiratif Untuk Kita</h4>
+                    <p class="text-teal-800">Pelajaran terbesarnya? "Syariah" bukanlah asuransi anti-gagal. "Syariah" adalah kompas etika yang menuntun kita untuk bersikap adil, transparan, dan amanah, terutama saat kita berada di tengah badai.</p>
+                    <p class="mt-3 text-teal-800">Dan dalam badai, seringkali sebuah jembatan damai (Sulh) yang dibangun di atas transparansi dan musyawarah jauh lebih bernilai dan menyelamatkan, daripada benteng paling kokoh sekalipun yang hanya berdiri sendirian dalam keterasingan.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FOOTER (Struktur dari file referensi) -->
+    <footer class="mt-16 pb-8 text-center">
+        <!-- Konten footer dihapus sesuai permintaan -->
+    </footer>
+
+    <!-- Script (Identik dengan file sebelumnya, menangani menu dan scroll-spy) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            menuButton.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('hidden');
+                iconOpen.classList.toggle('hidden', !isOpen);
+                iconClose.classList.toggle('hidden', isOpen);
+            });
+
+            document.querySelectorAll('.nav-link-mobile').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
+            });
+
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navHeight = document.querySelector('nav').offsetHeight;
+
+            const updateActiveLink = () => {
+                let currentSection = '';
+                
+                let bestMatch = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= sectionTop - navHeight - 80) { // 80px offset
+                        bestMatch = section.getAttribute('id');
+                    }
+                });
+                currentSection = bestMatch || (sections.length > 0 ? sections[0].getAttribute('id') : ''); // Fallback ke section pertama
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); 
+        });
+    </script>
+</body>
+</html>
