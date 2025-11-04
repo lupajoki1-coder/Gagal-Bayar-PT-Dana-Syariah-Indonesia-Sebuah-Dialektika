@@ -115,6 +115,7 @@
         .prose-custom li {
             margin-bottom: 0.5em;
         }
+        /* Tag strong dihapus, jadi rule ini tidak lagi terpakai, tapi dibiarkan */
         .prose-custom strong {
             color: #000;
         }
@@ -144,6 +145,8 @@
                     <a href="#jalan-pemulihan" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Jalan Pemulihan</a>
                     <a href="#titik-temu" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Titik Temu</a>
                     <a href="#refleksi" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Refleksi</a>
+                    <!-- BARU: Link ke Glosarium -->
+                    <a href="#glosarium" class="nav-link text-slate-600 font-medium px-1 py-4 text-sm">Glosarium</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-teal-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-SAtinteal-500">
@@ -162,6 +165,7 @@
                 <a href="#jalan-pemulihan" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Jalan Pemulihan</a>
                 <a href="#titik-temu" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Titik Temu</a>
                 <a href="#refleksi" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Refleksi</a>
+                <a href="#glosarium" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Glosarium</a>
             </div>
         </div>
     </nav>
@@ -195,7 +199,6 @@
         <section id="hook" class="content-card p-6 md:p-8 prose prose-custom max-w-none">
             <h2>Bagian 1: Paduan Suara dalam Krisis</h2>
             <p>Ada gempa kecil yang mengguncang rasa percaya. Saat sebuah platform yang menyandang nama "Syariah" mengalami gagal bayar, riaknya tidak hanya finansial, tapi juga emosional dan spiritual. Seketika, sebuah paduan suara—atau mungkin lebih tepat disebut konstelasi gagasan—muncul ke permukaan.</p>
-            <!-- DIUBAH: Menambahkan "jaminan" sebagai sumber persepsi -->
             <p>Di satu sisi, kita mendengar suara yang jernih dan berakar pada sebuah persepsi umum: "Dana kami harus kembali 100%," serunya. "Ini akad syariah, plus ada jaminan properti 'SCR 100%'. Modal dan margin sudah dijanjikan. Seharusnya tidak ada kerugian."</p>
             
             <blockquote>
@@ -204,9 +207,7 @@
                 <cite class="text-sm not-italic">- Salah satu persepsi investor</cite>
             </blockquote>
             
-            <!-- DIUBAH: Menambahkan "proses pengadilan" -->
             <p>Di sisi lain, terdengar suara yang lebih pragmatis, sebuah bisikan yang memetakan realitas hukum. "Tunggu dulu," katanya. "Mari kita audit dulu untuk mencari tahu ada tidaknya kelalaian. Mari kita amankan aset jaminan. Tapi, menjualnya butuh proses pengadilan. Mari kita cari jalan musyawarah (Sulh), mungkin konversi aset atau saham, untuk memaksimalkan pengembalian."</p>
-            <!-- DIUBAH: Mempertegas dialektika -->
             <p>Kita tidak sedang melihat dua kubu yang berperang. Kita sedang menyaksikan sebuah dialektika yang krusial: antara tuntutan yang berbasis persepsi (syariah + jaminan = aman) dan tawaran solusi yang berbasis realitas hukum syariah (syariah = adil, bebas riba, tapi terikat pada sistem hukum perdata yang kompleks). Di manakah keadilan bersemayam dalam dialog ini?</p>
         </section>
 
@@ -218,7 +219,6 @@
             <ul>
                 <li>Apakah "syariah" itu sebuah perisai ajaib anti-rugi? Ataukah ia sebuah kompas etika yang justru baru benar-benar diuji ketangguhannya saat badai datang?</li>
                 <li>Saat platform P2P Syariah (sebagai Wakil atau Agen) terhuyung, siapa sesungguhnya yang berada di garis depan untuk memikul risiko kredit? Platform-nya, atau Anda sebagai Muwakkil (Pemilik Modal)?</li>
-                <!-- BARU: Menambahkan poin dari PDF kedua -->
                 <li>Apakah regulator (OJK) punya solusi? Regulasi terbaru (POJK 40/2024) memang bisa menghukum platform yang lalai (punitif), tapi apakah regulasi itu bisa mengembalikan dana investor secara cepat (remedial)?</li>
                 <li>Apa makna "keadilan" dalam fiqh muamalah? Apakah ia identik dengan "kembali 100%", atau ia lebih bermakna "proses penyelesaian yang paling transparan, adil, dan paling sedikit mudaratnya" (Sulh)?</li>
             </ul>
@@ -240,9 +240,9 @@
                         <svg class="icon text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
                     </summary>
                     <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
-                        <p><strong>Persepsi Umum:</strong> Akad yang digunakan (Murabahah Wakalah bil Ujrah) menetapkan modal dan margin di muka. Logika yang terbangun: "tidak ada ruang untuk kerugian."</p>
+                        <p>Persepsi Umum: Akad yang digunakan (Murabahah Wakalah bil Ujrah) menetapkan modal dan margin di muka. Logika yang terbangun: "tidak ada ruang untuk kerugian."</p>
                         <h3 class="text-teal-700">Refleksi Kritis (Sesuai Realitas Hukum):</h3>
-                        <p>Ini adalah kesalahpahaman paling fundamental. Prinsip utama keuangan syariah bukanlah "bebas rugi", melainkan "bebas riba". Ada kaidah fiqh emas: <strong>Al-Ghunm bil Ghurm</strong>, yang artinya "Keuntungan Muncul Bersama Risiko" (No Risk, No Gain).</p>
+                        <p>Ini adalah kesalahpahaman paling fundamental. Prinsip utama keuangan syariah bukanlah "bebas rugi", melainkan "bebas riba". Ada kaidah fiqh emas: Al-Ghunm bil Ghurm, yang artinya "Keuntungan Muncul Bersama Risiko" (No Risk, No Gain).</p>
                         <p>Dalam akad Wakalah (perwakilan), Anda (Lender) adalah Muwakkil (Pemilik Modal). DSI adalah Wakil (Agen) yang Anda bayar jasanya (ujrah) untuk menyalurkan dana Anda ke Borrower (Developer). Utang-piutang terjadi antara Anda dan Borrower. DSI hanyalah perantara.</p>
                         <p>Saat si Borrower gagal bayar, risiko kredit macet itu, secara fiqh, mendarat di pangkuan Anda sebagai Pemilik Modal. Tuntutan "harus 100% kembali tanpa risiko" ironisnya justru mencerminkan logika transaksi Riba (bunga yang dijamin), bukan transaksi syariah yang berbasis risiko.</p>
                         <p>Terlebih lagi, Peraturan OJK (POJK) secara eksplisit melarang platform P2P (termasuk syariah) untuk "memberikan jaminan dalam segala bentuk" atas dana investor. Jadi, janji "pasti kembali" adalah ilegal secara hukum positif.</p>
@@ -256,12 +256,12 @@
                     </summary>
                     <!-- DIMODIFIKASI TOTAL: Memasukkan analisis Parate Executie dari PDF 2 -->
                     <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
-                        <p><strong>Persepsi Umum:</strong> Mitigasi risiko utama adalah jaminan aset >100%. Maka, satu-satunya solusi adalah eksekusi jaminan itu. Opsi lain dianggap menyalahi akad.</p>
+                        <p>Persepsi Umum: Mitigasi risiko utama adalah jaminan aset >100%. Maka, satu-satunya solusi adalah eksekusi jaminan itu. Opsi lain dianggap menyalahi akad.</p>
                         <h3 class="text-teal-700">Refleksi Kritis (Kesenjangan Yuridis Fundamental):</h3>
                         <p>Di sinilah letak "keterlambatan" yang sesungguhnya. Menuntut eksekusi jaminan (Rahn) adalah hak absolut kreditor. Namun, ada perbedaan fundamental antara eksekusi jaminan oleh Bank vs. P2P Lender.</p>
                         <ul>
-                            <li><strong>Bank (Kreditur Separatis):</strong> Dilindungi UU Hak Tanggungan (UUHT), Bank memiliki hak Parate Executie. Artinya, bank bisa langsung melelang jaminan (via KPKNL) tanpa putusan pengadilan. Prosesnya relatif cepat.</li>
-                            <li><strong>P2P Lender (Kreditur Konkuren):</strong> Anda adalah pihak dalam perjanjian perdata murni (KUHPerdata). Anda tidak punya hak Parate Executie.</li>
+                            <li>Bank (Kreditur Separatis): Dilindungi UU Hak Tanggungan (UUHT), Bank memiliki hak Parate Executie. Artinya, bank bisa langsung melelang jaminan (via KPKNL) tanpa putusan pengadilan. Prosesnya relatif cepat.</li>
+                            <li>P2P Lender (Kreditur Konkuren): Anda adalah pihak dalam perjanjian perdata murni (KUHPerdata). Anda tidak punya hak Parate Executie.</li>
                         </ul>
                         <p>Untuk mengeksekusi jaminan, P2P Lender (atau DSI sebagai kuasa) harus menempuh jalur litigasi perdata penuh: 1. Menggugat borrower di Pengadilan Negeri. 2. Menunggu putusan inkracht (berkekuatan hukum tetap), yang bisa memakan waktu bertahun-tahun jika ada banding/kasasi. 3. Mengajukan fiat eksekusi (penetapan) ke Pengadilan. 4. Baru bisa mendaftarkan lelang ke KPKNL.</p>
                         <p>Inilah inti krisisnya: Pemasaran menjanjikan keamanan likuid (SCR 100%), namun realitas hukumnya adalah proses litigasi yang sangat lambat. Tuntutan "jual jaminan sekarang" secara yuridis tidak dimungkinkan.</p>
@@ -275,7 +275,7 @@
                         <svg class="icon text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
                     </summary>
                     <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
-                        <p><strong>Persepsi Umum:</strong> DSI harus memberi janji tertulis yang spesifik (nominal, waktu, target). Janji yang kabur harus ditolak.</p>
+                        <p>Persepsi Umum: DSI harus memberi janji tertulis yang spesifik (nominal, waktu, target). Janji yang kabur harus ditolak.</p>
                         <h3 class="text-teal-700">Refleksi Kritis:</h3>
                         <p>Tuntutan ini adalah jantung dari prinsip Amanah. Dalam muamalah, musuh terbesarnya adalah Gharar (ketidakjelasan). Menuntut rencana pemulihan yang jelas, terukur, dan transparan bukanlah permintaan yang berlebihan, itu adalah hak syar'i investor.</p>
                     </div>
@@ -288,11 +288,11 @@
                     </summary>
                     <!-- DIMODIFIKASI: Menambahkan hak borrower (surplus) dari PDF 2 -->
                     <div class="accordion-content prose prose-custom max-w-none border-t border-slate-100">
-                        <p><strong>Persepsi Umum:</strong> Status pailit tidak menghilangkan tanggung jawab. Dana investor harus terpisah. Akad awal tidak bisa diubah.</p>
+                        <p>Persepsi Umum: Status pailit tidak menghilangkan tanggung jawab. Dana investor harus terpisah. Akad awal tidak bisa diubah.</p>
                         <h3 class="text-teal-700">Refleksi Kritis:</h3>
                         <p>Ini adalah poin krusial. Regulasi OJK (terbaru POJK 40/2024) mewajibkan pemisahan dana investor dalam Escrow Account (Rekening Titipan). Dana ini tidak boleh bercampur dengan dana operasional DSI dan tidak termasuk harta pailit DSI.</p>
-                        <p>Kapan DSI (sebagai Wakil) bisa dimintai tanggung jawab penuh? Statusnya bisa bergeser dari Amanah (kepercayaan) menjadi <strong>Dhaman</strong> (penanggung jawab penuh) jika dan only jika ia terbukti melakukan kelalaian fatal (Ta'addi / Tafrit) atau misrepresentasi (Tadlis). Inilah tujuan utama dari Audit Forensik.</p>
-                        <p><strong>Keadilan Dua Arah (Poin Kritis PDF 2):</strong> Keadilan syariah tidak hanya untuk Pemberi Dana (Lender). Fatwa DSN-MUI (No. 25/2002 & 47/2005) sangat jelas: jaminan (rahn) bukan untuk mencari untung. Jika hasil lelang jaminan melebihi sisa utang dan biaya, kelebihan (surplus) itu WAJIB dikembalikan kepada Penerima Dana (Borrower). Jika platform/lender menahan surplus itu, itu adalah pelanggaran syariah yang fundamental (zhalim).</p>
+                        <p>Kapan DSI (sebagai Wakil) bisa dimintai tanggung jawab penuh? Statusnya bisa bergeser dari Amanah (kepercayaan) menjadi Dhaman (penanggung jawab penuh) jika dan only jika ia terbukti melakukan kelalaian fatal (Ta'addi / Tafrit) atau misrepresentasi (Tadlis). Inilah tujuan utama dari Audit Forensik.</p>
+                        <p>Keadilan Dua Arah (Poin Kritis PDF 2): Keadilan syariah tidak hanya untuk Pemberi Dana (Lender). Fatwa DSN-MUI (No. 25/2002 & 47/2005) sangat jelas: jaminan (rahn) bukan untuk mencari untung. Jika hasil lelang jaminan melebihi sisa utang dan biaya, kelebihan (surplus) itu WAJIB dikembalikan kepada Penerima Dana (Borrower). Jika platform/lender menahan surplus itu, itu adalah pelanggaran syariah yang fundamental (zhalim).</p>
                     </div>
                 </details>
             </div>
@@ -316,7 +316,7 @@
                                 <div><span class="h-8 w-8 rounded-full bg-teal-100 flex items-center justify-center ring-8 ring-white"><svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></span></div>
                                 <div class="min-w-0 flex-1 pt-1.5">
                                     <h3 class="font-semibold text-slate-800">Langkah 1: Audit Forensik & Pemisahan Dana</h3>
-                                    <p class="mt-2 text-slate-600"><strong>Refleksi Syariah:</strong> Usulan Audit Forensik adalah langkah tabayyun (klarifikasi). Audit ini krusial untuk mendeteksi ada tidaknya kelalaian (Ta'addi) atau misrepresentasi (Tadlis) dari pihak DSI. Ini akan menentukan apakah status DSI beralih menjadi Dhaman (penanggung jawab). Sekaligus, memastikan dana di Escrow Account terpisah dan aman.</p>
+                                    <p class="mt-2 text-slate-600">Refleksi Syariah: Usulan Audit Forensik adalah langkah tabayyun (klarifikasi). Audit ini krusial untuk mendeteksi ada tidaknya kelalaian (Ta'addi) atau misrepresentasi (Tadlis) dari pihak DSI. Ini akan menentukan apakah status DSI beralih menjadi Dhaman (penanggung jawab). Sekaligus, memastikan dana di Escrow Account terpisah dan aman.</p>
                                 </div>
                             </div>
                         </div>
@@ -330,7 +330,7 @@
                                 <div class="min-w-0 flex-1 pt-1.5">
                                     <h3 class="font-semibold text-slate-800">Langkah 2: Likuidasi Aset Jaminan</h3>
                                     <!-- DIUBAH: Menambahkan konteks "lambat" -->
-                                    <p class="mt-2 text-slate-600"><strong>Refleksi Syariah:</strong> Usulan likuidasi aset sejalan dengan hak investor atas Rahn (jaminan). Ini adalah langkah hukum yang sah. Namun, seperti dibahas di Bagian 3, ini adalah jalur litigasi perdata yang lambat karena P2P Lender tidak memiliki hak Parate Executie.</p>
+                                    <p class="mt-2 text-slate-600">Refleksi Syariah: Usulan likuidasi aset sejalan dengan hak investor atas Rahn (jaminan). Ini adalah langkah hukum yang sah. Namun, seperti dibahas di Bagian 3, ini adalah jalur litigasi perdata yang lambat karena P2P Lender tidak memiliki hak Parate Executie.</p>
                                 </div>
                             </div>
                         </div>
@@ -341,12 +341,12 @@
                             <div class="relative flex space-x-3">
                                 <div><span class="h-8 w-8 rounded-full bg-teal-100 flex items-center justify-center ring-8 ring-white"><svg class="h-5 w-5 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 4H4m0 0l4 4m-4-4l4-4" /></svg></span></div>
                                 <div class="min-w-0 flex-1 pt-1.5">
-                                    <h3 class="font-semibold text-slate-800">Langkah 3: Musyawarah untuk Opsi *Sulh* (Restrukturisasi)</h3>
+                                    <h3 class="font-semibold text-slate-800">Langkah 3: Musyawarah untuk Opsi Sulh (Restrukturisasi)</h3>
                                     <!-- DIUBAH: Menambahkan konteks "kenapa" sulh penting -->
-                                    <p class="mt-2 text-slate-600"><strong>Refleksi Syariah:</strong> Inilah inti dari "jembatan" itu. Justru karena Langkah 2 (Litigasi) sangat lambat dan mahal, kreativitas muamalah melalui _Sulh_ (damai) menjadi sangat penting. Opsi ini ditawarkan untuk menghindari kebuntuan hukum:</p>
+                                    <p class="mt-2 text-slate-600">Refleksi Syariah: Inilah inti dari "jembatan" itu. Justru karena Langkah 2 (Litigasi) sangat lambat dan mahal, kreativitas muamalah melalui Sulh (damai) menjadi sangat penting. Opsi ini ditawarkan untuk menghindari kebuntuan hukum:</p>
                                     <ul class="mt-2">
-                                        <li><strong>Debt-to-Asset Swap:</strong> Anda dibayar bukan dengan uang, tapi dengan aset riil (misal, unit properti) dari proyek macet.</li>
-                                        <li><strong>Debt-to-Equity Swap:</strong> Piutang Anda dikonversi menjadi saham. Status Anda berubah dari Kreditor (cemas) menjadi Pemilik (punya kendali).</li>
+                                        <li>Debt-to-Asset Swap: Anda dibayar bukan dengan uang, tapi dengan aset riil (misal, unit properti) dari proyek macet.</li>
+                                        <li>Debt-to-Equity Swap: Piutang Anda dikonversi menjadi saham. Status Anda berubah dari Kreditor (cemas) menjadi Pemilik (punya kendali).</li>
                                     </ul>
                                     <p class="mt-2">Kedua opsi Sulh ini sah selama didasari kerelaan ('an taradhin) dan seringkali memberi recovery rate yang lebih optimal daripada memaksakan lelang via litigasi bertahun-tahun.</p>
                                 </div>
@@ -357,44 +357,17 @@
             </div>
         </section>
 
-        <!-- Bagian 5: Titik Temu (Diperbarui) -->
+        <!-- Bagian 5: Titik Temu (Glosarium dihapus dari sini) -->
         <section id="titik-temu" class="content-card p-6 md:p-8">
             <div class="prose prose-custom max-w-none">
                 <h2>Bagian 5: Titik Temu di Balik Dialektika</h2>
                 <p>Setelah mendengar kedua sisi dari paduan suara ini, kita mungkin tergoda untuk memilih satu di atas yang lain. Tapi, bagaimana jika kita melihatnya secara berbeda? Bagaimana jika ini bukan "Tuntutan A vs Solusi B", melainkan sebuah evolusi pemahaman?</p>
                 
-                <!-- DIUBAH: Memperkaya definisi dialektika -->
                 <p>Ini adalah dialektika antara Persepsi Umum (syariah = bebas rugi) dengan Realitas Hukum Syariah (syariah = bebas riba, tapi al-ghunm bil ghurm). Dan lebih dalam lagi, ini adalah dialektika antara Keadilan Pemasaran (Aman, SCR 100%) dengan Keadilan Yuridis (sistem eksekusi perdata yang lambat, namun juga adil dalam melindungi hak borrower atas surplus lelang).</p>
                 
                 <p>"Suara Tuntutan" yang kaku (jual paksa sekarang) berisiko menjadi jalan buntu karena tidak memiliki payung hukum parate executie. "Jalan Pemulihan" yang pragmatis, jika dilandasi transparansi (via Audit Forensik) dan musyawarah (Sulh), justru seringkali menjadi jalan yang paling syar'i untuk menyelamatkan sisa nilai aset yang ada.</p>
 
-                <!-- Glosarium (SANGAT DIPERBARUI dari PDF) -->
-                <h3 class="mt-12">Glosarium Intuitif Kita</h3>
-                <!-- DIUBAH: Menambahkan 4 istilah baru -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                    <div><strong>Murabahah:</strong> Akad jual-beli dengan info margin yang transparan.</div>
-                    <div><strong>Wakalah bil Ujrah:</strong> Akad perwakilan (agen) dengan imbalan *fee* (ujrah).</div>
-                    <div><strong>Wakil:</strong> Agen (Perwakilan). Dalam kasus ini adalah DSI (platform).</div>
-                    <div><strong>Muwakkil:</strong> Pemberi Mandat. Dalam kasus ini adalah Anda (investor/lender).</div>
-                    <div><strong>Al-Ghunm bil Ghurm:</strong> Kaidah fiqh: "Keuntungan datang bersama risiko" (No Risk, No Gain).</div>
-                    <div><strong>Riba:</strong> Bunga/keuntungan yang dijamin di muka atas pokok pinjaman, tanpa menanggung risiko.</div>
-                    <div><strong>Ta'addi / Tafrit:</strong> Pelanggaran mandat atau kelalaian fatal oleh si *Wakil*.</div>
-                    <div><strong>Tadlis:</strong> Misrepresentasi atau menyembunyikan informasi (risiko) untuk mengelabui.</div>
-                    <div><strong>Dhaman:</strong> Penanggung Jawab. Status *Wakil* bisa beralih menjadi *Dhaman* jika terbukti *Ta'addi* atau *Tadlis*.</div>
-                    <!-- BARU DARI PDF 2 -->
-                    <div><strong>POJK 40/2024:</strong> Regulasi OJK terbaru yang mengatur P2P (bersifat *punitif* tapi bukan *remedial*).</div>
-                    <div><strong>UU Hak Tanggungan (UUHT):</strong> UU yang memberi bank hak *parate executie*.</div>
-                    <div><strong>Parate Executie:</strong> Hak eksekusi/lelang jaminan secara langsung (dimiliki Bank, tidak dimiliki P2P Lender).</div>
-                    <div><strong>Kreditur Separatis:</strong> Kreditur yang diutamakan (Bank).</div>
-                    <div><strong>Kreditur Konkuren:</strong> Kreditur biasa (P2P Lender) yang harus lewat litigasi.</div>
-                    <!-- AKHIR BARU -->
-                    <div><strong>Sulh:</strong> Penyelesaian sengketa secara damai (musyawarah/negosiasi).</div>
-                    <div><strong>Debt-to-Asset Swap:</strong> Konversi utang menjadi aset (misal, unit properti).</div>
-                    <div><strong>Debt-to-Equity Swap:</strong> Konversi piutang menjadi kepemilikan saham.</div>
-                    <div><strong>Escrow Account:</strong> Rekening titipan (wajib OJK) untuk memisahkan dana investor dari dana operasional platform.</div>
-                    <div><strong>Audit Forensik:</strong> Investigasi keuangan untuk mendeteksi kecurangan atau kelalaian.</div>
-                    <div><strong>Hifdz al-Mal:</strong> Prinsip agung syariah untuk 'menjaga/menyelamatkan harta'.</div>
-                </div>
+                <!-- GLOSARIUM DIPINDAHKAN DARI SINI -->
 
             </div>
         </section>
@@ -413,13 +386,125 @@
                 <div class="bg-teal-50 border-l-4 border-teal-500 text-teal-900 p-6 rounded-r-lg my-6 not-prose">
                     <h4 class="font-bold text-lg mb-2">Pesan Inspiratif Untuk Kita</h4>
                     <p class="text-teal-800">Pelajaran terbesarnya? Investasi Syariah berarti "Bebas Riba", bukan "Bebas Risiko". Risiko bisnis (seperti gagal bayar) adalah nyata dan merupakan bagian dari akad yang Anda setujui (Al-Ghunm bil Ghurm).</p>
-                    <!-- DIUBAH: Menambahkan poin dari PDF 2 -->
                     <p class="mt-3 text-teal-800">Saat badai datang, jangan hanya terpaku pada "label" syariah. Pahami "akad" Anda. Ketahui posisi Anda sebagai Pemilik Modal (Muwakkil) dan sadari bahwa sistem P2P secured lending di Indonesia masih memiliki kelemahan yuridis (non-parate executie). Solusi musyawarah (Sulh) seringkali jauh lebih strategis dan adil daripada tuntutan yang kaku.</p>
                 </div>
             </div>
         </section>
 
     </main>
+
+    <!-- BARU: Bagian Glosarium (Dipindah dan Distyle Ulang) -->
+    <section id="glosarium" class="max-w-4xl mx-auto p-4 md:p-8 mt-10 md:mt-12">
+        <h2 class="text-3xl font-bold text-teal-700 text-center mb-10 border-b border-slate-300 pb-4">
+            Glosarium Istilah Kunci
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Murabahah</h4>
+                <p class="text-slate-600 mt-1">Akad jual-beli dengan info margin yang transparan.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Wakalah bil Ujrah</h4>
+                <p class="text-slate-600 mt-1">Akad perwakilan (agen) dengan imbalan *fee* (ujrah).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Wakil</h4>
+                <p class="text-slate-600 mt-1">Agen (Perwakilan). Dalam kasus ini adalah DSI (platform).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Muwakkil</h4>
+                <p class="text-slate-600 mt-1">Pemberi Mandat. Dalam kasus ini adalah Anda (investor/lender).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Al-Ghunm bil Ghurm</h4>
+                <p class="text-slate-600 mt-1">Kaidah fiqh: "Keuntungan datang bersama risiko" (No Risk, No Gain).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Riba</h4>
+                <p class="text-slate-600 mt-1">Bunga/keuntungan yang dijamin di muka atas pokok pinjaman, tanpa menanggung risiko.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Ta'addi / Tafrit</h4>
+                <p class="text-slate-600 mt-1">Pelanggaran mandat atau kelalaian fatal oleh si Wakil.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Tadlis</h4>
+                <p class="text-slate-600 mt-1">Misrepresentasi atau menyembunyikan informasi (risiko) untuk mengelabui.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Dhaman</h4>
+                <p class="text-slate-600 mt-1">Penanggung Jawab. Status Wakil bisa beralih menjadi Dhaman jika terbukti Ta'addi atau Tadlis.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">POJK 40/2024</h4>
+                <p class="text-slate-600 mt-1">Regulasi OJK terbaru yang mengatur P2P (bersifat punitif tapi bukan remedial).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">UU Hak Tanggungan (UUHT)</h4>
+                <p class="text-slate-600 mt-1">UU yang memberi bank hak parate executie.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Parate Executie</h4>
+                <p class="text-slate-600 mt-1">Hak eksekusi/lelang jaminan secara langsung (dimiliki Bank, tidak dimiliki P2P Lender).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Kreditur Separatis</h4>
+                <p class="text-slate-600 mt-1">Kreditur yang diutamakan (Bank).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Kreditur Konkuren</h4>
+                <p class="text-slate-600 mt-1">Kreditur biasa (P2P Lender) yang harus lewat litigasi.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Sulh</h4>
+                <p class="text-slate-600 mt-1">Penyelesaian sengketa secara damai (musyawarah/negosiasi).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Debt-to-Asset Swap</h4>
+                <p class="text-slate-600 mt-1">Konversi utang menjadi aset (misal, unit properti).</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Debt-to-Equity Swap</h4>
+                <p class="text-slate-600 mt-1">Konversi piutang menjadi kepemilikan saham.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Escrow Account</h4>
+                <p class="text-slate-600 mt-1">Rekening titipan (wajib OJK) untuk memisahkan dana investor dari dana operasional platform.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Audit Forensik</h4>
+                <p class="text-slate-600 mt-1">Investigasi keuangan untuk mendeteksi kecurangan atau kelalaian.</p>
+            </div>
+            <!-- Item Glosarium -->
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                <h4 class="font-semibold text-lg text-slate-800">Hifdz al-Mal</h4>
+                <p class="text-slate-600 mt-1">Prinsip agung syariah untuk 'menjaga/menyelamatkan harta'.</p>
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- 4. FOOTER (Struktur dari file referensi) -->
     <footer class="mt-16 pb-8 text-center">
@@ -440,11 +525,25 @@
                 iconClose.classList.toggle('hidden', isOpen);
             });
 
-            document.querySelectorAll('.nav-link-mobile').forEach(link => {
+            document.querySelectorAll('.nav-link, .nav-link-mobile').forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    iconOpen.classList.remove('hidden');
-                    iconClose.classList.add('hidden');
+                    // Tutup menu mobile jika link mobile diklik
+                    if (link.classList.contains('nav-link-mobile')) {
+                        mobileMenu.classList.add('hidden');
+                        iconOpen.classList.remove('hidden');
+                        iconClose.classList.add('hidden');
+                    }
+
+                    // Hapus 'active' dari semua link desktop
+                    document.querySelectorAll('.nav-link').forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    
+                    // Tambahkan 'active' ke link desktop yang sesuai (jika ada)
+                    const desktopLink = document.querySelector(`.nav-link[href="${link.getAttribute('href')}"]`);
+                    if (desktopLink) {
+                        desktopLink.classList.add('active');
+                    }
                 });
             });
 
@@ -458,11 +557,14 @@
                 let bestMatch = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
+                    // Penyesuaian offset untuk memastikan link aktif saat section berada di atas
                     if (window.scrollY >= sectionTop - navHeight - 80) { // 80px offset
                         bestMatch = section.getAttribute('id');
                     }
                 });
-                currentSection = bestMatch || (sections.length > 0 ? sections[0].getAttribute('id') : ''); // Fallback ke section pertama
+                
+                // Jika tidak ada bestMatch (misal di paling atas), set ke section pertama
+                currentSection = bestMatch || (sections.length > 0 ? sections[0].getAttribute('id') : '');
 
                 navLinks.forEach(link => {
                     link.classList.remove('active');
@@ -473,7 +575,7 @@
             };
 
             window.addEventListener('scroll', updateActiveLink);
-            updateActiveLink(); 
+            updateActiveLink(); // Jalankan sekali saat load
         });
     </script>
 
